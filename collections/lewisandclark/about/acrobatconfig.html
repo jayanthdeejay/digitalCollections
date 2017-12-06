@@ -1,0 +1,119 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Lewis and Clark: a Journey: Acrobat Configuration</title>
+
+<meta name="Keywords" content="University Libraries, University of Cincinnati Digital Press, Lewis and Clark" />
+
+
+<script type="text/javascript" src="../scripts/loadstyles_black.js"></script>
+
+<style type="text/css">
+  .acrolist { list-style-type: circle;
+	list-style: outside;
+	list-style-image: url("check.gif"); }
+</style>
+
+</head>
+
+
+
+<body>
+<div class="content">
+<div class="accnav" > <a href="#con">Skip to page
+  content</a></div>
+<!--for netscape4 users-->
+<div class="nn">The University Libraries website has been designed
+  using XHTML and Cascading Style Sheets to enhance accessibility. It also uses limited javascript. These options are not supported well in browser versions earlier than 5.0. If you are seeing this message, your page may
+  not display well, but will function correctly. Please upgrade your browser to Netscape version 7 or higher or Internet Explorer version 6 or higher.
+<hr/>
+  If you have problems with any portion of this site, you may <a href="mailto:linda.newman@uc.edu">email
+  the site developer here</a>, or send a note to linda.newman@uc.edu</div>
+
+ <!-- this begins the web page as displayed-->
+
+
+<!--begin header-->
+	<div id="headerwrap"><div class="headertopleft">
+<img src="../pageimages/lclogo_transparent_tanmatte.gif" usemap="#lclogomap" id="logomap" hspace="0" vspace="0" border="0"  width="115" height="80" alt="Lewis and Clark Home"/>
+<map name="lclogomap" id="logomap2">
+    <area shape="circle" coords="55,45,40" href="../index.php" title="Lewis and Clark Home" alt="Lewis and Clark Home"></area>
+</map>
+
+  </div>
+
+ <div class="headertopright">
+<ul id="menu">
+<li id="nav1">
+<?php
+if ($_Session["SessionFast"]="true")
+?>
+<a href="/lewisandclark/biddle/fast.html">
+<?php
+else if ($_Session["SessionSlow"]="true")
+?>
+<a href="/lewisandclark/biddle/slow.html">
+<?php
+else
+?>
+<a href="/lewisandclark/biddle/index.html">JOURNAL</a><img src="../pageimages/rosepaw.gif" vspace="0" hspace="5" border="0" alt="separator"/></li><li id="nav2"><a href="/lewisandclark/timeline/">TIMELINE</a><img src="../pageimages/rustpaw.gif" vspace="0" hspace="5" border="0" alt="separator"/></li><li id="nav3"><a href="/lewisandclark/maps/">MAPS</a><img src="../pageimages/bluepaw.gif" vspace="0" hspace="5" border="0" alt="separator"/></li><li id="nav4"><a href="/lewisandclark/pathfinder/">PATHFINDER</a><img src="../pageimages/greenpaw.gif" vspace="0" hspace="5" border="0" alt="separator"/></li><li id="nav5"><a href="/lewisandclark/exhibits/">EXHIBITS</a></li><li id="nav6"><br/><a href="/lewisandclark/links/">LINKS &amp; MORE</a><img src="../pageimages/brownpaw.gif" vspace="0" hspace="5" border="0" alt="separator"/></li><li id="nav7"><a href="/lewisandclark/timeline/today.asp">TODAY IN LEWIS &amp; CLARK</a><img src="../pageimages/rosepaw.gif" vspace="0" hspace="5" border="0" alt="separator"/></li><li id="nav8"><a href="/lewisandclark/about/">ABOUT THIS SITE</a></li>
+</ul>
+</div>
+ </div>
+ <!--end header-->
+
+
+
+ <a name="con" id="con"></a>
+
+<div class="pagetitle">ADOBE ACROBAT READER CONFIGURATION</div>
+
+<div align="left" class="nocols">
+<div align="left" class="textwrap">
+<div class="text" align="left">
+<div class="acrolist">
+<blockquote>
+ <p>Adobe Acrobat Reader, Version 5 or higher, is required for this web site.  (Click <a href="http://www.adobe.com/products/acrobat/readstep2.html">here</a> for Acrobat Reader.)</p>
+<p>It's a good idea to start Adobe Acrobat Reader separately from your browser and check your configuration (you need only do this once).  Windows users select 'Edit' and then 'Preferences'.  Mac users select 'Acrobat' and then 'Preferences.'  Please enable all options shown below.</p>
+<center>Version 5:</center>
+'Options' category:<br/>
+Under 'Web Browser Options':
+		<ul><li>Display PDF in Browser (*)</li><li>Check Browser Settings When Starting Acrobat</li><li>Allow Fast Web View (*)</li><li>Allow Background Downloading (*)</li></ul>
+Under 'Miscellaneous':
+                            <ul><li>Use Page Cache</li><li>Use Logical Page Numbers(*)</li><li>Allow File Open Actions and Launching File Attachments</li><li>Open Cross-Document Links in Same Window</li></ul>
+<center>Version 6:</center>
+'Internet' category:<br/>
+&nbsp;&nbsp;&nbsp;Under 'Internet Options' set your 'Connection Speed' as appropriate.<br/>
+&nbsp;&nbsp;&nbsp;Under 'Web Browser Options':
+		<ul><li>Display PDF in browser (*)</li><li>Check browser settings when starting Reader</li><li>Allow fast web view(*)</li><li>Allow speculative downloading in the background(*)</li></ul>
+'Search' category:
+		<ul><li>Enable fast find</li></ul>
+'Page Display' category:
+		<ul><li>Use logical page numbers (*)</li></ul>
+'Startup' category:
+		<ul><li>Use Page Cache</li></ul>
+'General' category:
+		<ul><li>Open cross-document links in same window</li><li>Save As optimizes for Fast Web View.</li></ul>
+'Trust Manager' category:
+		<ul><li>Allow documents to open other files and launch other applications.</li></ul>
+<p>All of the above choices make a difference for this web site, but those configuration options marked with an asterisk (*) are especially important.  In particular, if 'Display PDF in Browser' is not selected, links intended to go to a specific page within the Journal may instead default to the first page, and 'fast web viewing' will not be in effect.  You may want to review many of the other choices in the Acrobat Preferences menu to set per your preferences.</p>
+
+<p><b>Connection Speed:</b> The journal pdfs are big files.  Adobe Acrobat provides 'Fast Web View' which supports 'page at a time' web browsing, but the large files will still be difficult if users have dial-up or slow connections.  Therefore this site queries the user for their connection speed, and for users with slower speeds, directs those users to the journal in more parts.  Users are also encouraged to download the pdf files for offline viewing.  Simply right-click on the link and choose 'Save Target As.'</p>
+<p>If you have questions about this site, please contact the <a href="../contacts">University of Cincinnati Digital Press</a>.</p>
+
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+
+<!--#include virtual="/lewisandclark/includes/footer.inc" -->
+</div>
+
+<!--#include virtual="/includes/analytics.html"-->
+</body>
+</html>

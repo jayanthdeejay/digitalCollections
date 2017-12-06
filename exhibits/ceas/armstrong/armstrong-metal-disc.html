@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <!--uc libraries-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta charset="ISO-8859-1" />
+    	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
+        <title>The UC Neil Armstrong Commemorative Archives Collection Artifacts: Ballistic Particle Test, Metal Disc</title>
+               
+        <!--armstrong site-->
+        <link rel="stylesheet" media="screen" href="css/armstrong.css" />
+        <!--UC global nav-->
+    	<link rel="stylesheet" media="screen" href="css/globalnav.css" />
+        
+        <!--google fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Numans|Days+One' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css' />
+        
+        <!--scripts-->
+        <!--jquery-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+             if (typeof jQuery == 'undefined'){
+                document.write(unescape('%3Cscript src="scripts/jquery-min.js" %3E%3C/script%3E'));
+             }
+        </script>
+        
+        <!--nav script-->
+    <script src="scripts/armstrong-nav.js" type="text/javascript"></script>
+        
+		<script type="text/javascript">
+			// hide URL field on the iPhone/iPod touch
+			function hideUrlBar() {
+				
+				if (window.pageYOffset==0) {
+					window.scrollTo(0, 1);
+					// repeat every second for slow rendering pages
+					setTimeout(function() { hideUrlBar(); }, 3000);
+				
+				}
+			}
+		</script>
+        
+</head>
+
+
+<body onorientationchange="hideUrlBar();">
+	
+    <div id="armstrong-wrapper" class="wrapper-3d-objects">
+    
+    	<!--uc global navigation bar-->
+		<!--#include virtual="includes/globalnav-html.html"--> 
+        
+        <!--armstrong navigation menu-->
+  		<!--#include virtual="includes/armstrong-nav-menu-large-3d-objects.inc"--> 
+        
+        <!--large 3d objects menu-->
+        <!--#include virtual="includes/armstrong-large-3d-objects-menu.inc"--> 
+            
+		<script type="text/javascript" src="3d-objects/object2vr_player.js"></script>
+
+		<script type="text/javascript" src="3d-objects/skin-large.js"></script>
+        
+        <h1 class="hidden">The UC Neil Armstrong Commemorative Archives Collection Artifacts: Ballistic Particle Test, Metal Disc</h1>
+
+        <!--begin metal disc object large-->
+        <div id="wrapper-container-disc"  class="wrapper-container">
+        <div id="container-metal-disc-large" class="container-large">
+		This content requires HTML5 &amp; Javascript or Adobe Flash Player Version 9 or higher.
+		</div>
+		<script type="text/javascript">
+	
+			// create the object player with the container
+			obj=new object2vrPlayer("container-metal-disc-large");
+			// add the skin object
+			skin=new object2vrSkin(obj);
+			// load the configuration
+			obj.readConfigUrl("3d-objects/metal_disc/normal_background/large/normal_background_out.xml");
+			// hide the URL bar on the iPhone
+			hideUrlBar();
+		
+		</script>
+		<noscript>
+			<p><b>Please enable Javascript!</b></p>
+		</noscript>
+        
+        <p class="large-3d-object-description">Ballistic Particle Test, Metal Disc</p>
+        </div>
+        <!--end metal disc object large-->
+  
+        
+    </div><!--end armstrong-wrapper--> 
+</body>
+
+</html>

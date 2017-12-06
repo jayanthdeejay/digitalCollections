@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin collection specific meta tags -->
+    <link rel="canonical" href="http://digital.libraries.uc.edu/collections/coopengineer/" />
+    <link rel="schema.DC" href="http://purl.org/DC/elements/1.1/" />
+    <meta name="description" content="The Cooperative Engineer was published quarterly from 1921 to 1975 by the students and alumni of the College of Engineering, University of Cincinnati. It offers primary material on the college, the campus, and the City of Cincinnati; chronicles the advancement of engineering and industrial processes in the 20th century; and gives insight into student life and social customs of the time. Original materials are held at the UC Archives and Rare Books Library." />
+    <meta name="DC.title" content="Cooperative Engineer" />
+    <meta name="DC.creator" content="University of Cincinnati" />
+    <meta name="DC.publisher" content="University of Cincinnati. Libraries" />
+    <meta name="DC.date" content="1921-1975" />
+    <meta name="DC.identifier" content="http://digital.libraries.uc.edu/luna/servlet/univcincin~37~37" />
+    <meta name="DC.type" content="text" />
+    <meta name="DC.rights" content="http://digital.libraries.uc.edu/fairuse/" />
+    <meta name="DC.language" content="eng" />
+    <meta name="DC.subject" content="University of Cincinnati -- Bibliography" />
+    <meta name="DC.subject" content="University of Cincinnati. College of Engineering" />
+    <meta name="DC.subject" content="University of Cincinnati. College of Engineering and Commerce" />
+    <meta name="DC.subject" content="University of Cincinnati. College of Engineering" />
+    <meta name="DC.subject" content="University of Cincinnati. College of Engineering and Commerce" />
+    <meta name="Keywords" content="University Libraries, University of Cincinnati, University of Cincinnati Libraries, Digital Collections and Repositories, ARL Research Library, Cincinnati" />
+    <!-- End collection specific meta tags -->
+    <title>Cooperative Engineer (1921-1975) | Digital Collections and Repositories | UC Libraries</title>
+    <!--#include virtual="/includes/style.html"-->
+    <style>
+        .colWrapper {
+            background-image: url('/images/collections/backgrounds/coopEngineer2.jpg');
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--#include virtual="/includes/globalNav.html"-->
+    <!--#include virtual="/includes/header.html"-->
+    <div class="colWrapper">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12 colInfo">
+                    <h2 style="text-align:center">Cooperative Engineer (1921-1975)</h2>
+
+
+
+                    <p>The <em>Cooperative Engineer</em> was published quarterly from 1921 to 1975 by the students and alumni of the College of Engineering, University of Cincinnati. It offers primary material on the college, the campus, and the City of
+                        Cincinnati; chronicles the advancement of engineering and industrial processes in the 20th century; and gives insight into student life and social customs of the time. Original materials are held at the <a href="http://www.libraries.uc.edu/libraries/arb/">UC Archives and Rare Books Library.</a></p>
+
+
+                    <h3>Full-Text Search <em>Cooperative Engineer</em></h3>
+                    <form class="form-inline" name="coopSearch" onSubmit="return dosearchCoop();" style="margin-bottom: 20px;">
+                        <div class="form-group">
+                            <label for="searchCoop">Search</lablel>
+                                <input type="text" class="form-control" id="searchCoop" placeholder="Enter search terms" name="searchtermsCoop" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+
+
+                    <div class="text-center">
+                        <a href="http://drc.libraries.uc.edu/handle/2374.UC/124/" class="btn btn-lg btn-primary collButton" title="Cooperative Engineer (1921-1975)" role="button">Visit Digital Collection</a>
+
+                        <a href="covers/" class="btn btn-lg btn-primary collButton" title="Cooperative Engineer (1921-1975) Covers" role="button">View Gallery of Covers</a>
+                    </div>
+                    <div class="sponsor">
+                        <p>For support of this project, the <a href="http://www.libraries.uc.edu/libraries/ceas/">College of Engineering and Applied Science (CEAS) Library</a> is indebted to Michael and Margaret Valentine.</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--#include virtual="/includes/footer.html"-->
+    <!--#include virtual="/includes/scripts.html"-->
+    <!--Page-specific scripts BEGIN-->
+    <script>
+        function dosearchCoop() {
+            var sf = document.coopSearch;
+            var submitto = "https://drc.libraries.uc.edu/handle/2374.UC/124/search?rpp=10&sort_by=0&order=DESC&submit=Go&query=" + escape(sf.searchtermsCoop.value);
+            window.location.href = submitto;
+            return false;
+        }
+    </script>
+    <!--Page-specific scripts END-->
+</body>
+
+</html>

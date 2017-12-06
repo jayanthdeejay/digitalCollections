@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Digital Collections | Digital Collections and Repositories | UC Libraries</title>
+	<!--#include virtual="/includes/style.html"-->
+	<link rel="canonical" href="http://digital.libraries.uc.edu/collections/" />
+	<link rel="stylesheet" href="/css/grid.css" media="all">
+</head>
+
+<body>
+
+	<!--#include virtual="/includes/globalNav.html"-->
+	<!--#include virtual="/includes/header.html"-->
+	<div class="container fade-in">
+		<h2 class="text-center">Digital Collections</h2>
+
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs nav-justified cardcats" role="tablist">
+			<li role="presentation" class="active"><a href="#library" aria-controls="library" role="tab" onclick="return false;">Library</a></li>
+			<li role="presentation"><a href="#subject" aria-controls="subject" role="tab" onclick="return false;">Subject</a></li>
+			<li role="presentation"><a href="#format" aria-controls="format" role="tab" onclick="return false;">Format</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content" align="center">
+			<div role="tabpanel" class="tab-pane active" id="library">
+				<div class="filters button-group filters-button-group1 cardfilts" id="libdiv">
+					<button class="button btn btn-default btn-primary is-checked show" data-filter="*" id="show1">Show all</button>
+					<button class="button btn btn-default btn-primary" data-filter=".ARB">Archives &amp; Rare Books Library</button>
+					<button class="button btn btn-default btn-primary" data-filter=".CCM">CCM Library</button>
+					<button class="button btn btn-default btn-primary" data-filter=".DAAP">DAAP Library</button>
+					<button class="button btn btn-default btn-primary" data-filter=".LANGSAM">Langsam Library</button>
+					<button class="button btn btn-default btn-primary" data-filter=".SEL">Science &amp; Engineering Libraries</button>
+					<button class="button btn btn-default btn-primary" data-filter=".WINKLER">Winkler Center</button>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="subject">
+				<div class="filters button-group filters-button-group1 cardfilts" id="subdiv">
+					<button class="button btn btn-default btn-primary is-checked" data-filter="*" id="show2">Show all</button>
+					<button class="button btn btn-default btn-primary" data-filter=".AA">Art &amp; Architecture</button>
+					<button class="button btn btn-default btn-primary" data-filter=".CH">Cincinnati History</button>
+					<button class="button btn btn-default btn-primary" data-filter=".LIT">Literature</button>
+					<button class="button btn btn-default btn-primary" data-filter=".MED">Medicine</button>
+					<button class="button btn btn-default btn-primary" data-filter=".MUSIC">Music</button>
+					<button class="button btn btn-default btn-primary" data-filter=".SCI">Science &amp; Engineering</button>
+					<button class="button btn btn-default btn-primary" data-filter=".UCH">UC History</button>
+					<button class="button btn btn-default btn-primary" data-filter=".WA">Western Americana</button>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="format">
+				<div class="filters button-group filters-button-group1 cardfilts" id="fordiv">
+					<button class="button btn btn-default btn-primary is-checked show" data-filter="*" id="show3">Show All</button>
+					<button class="button btn btn-default btn-primary" data-filter=".IMAGE">Images</button>
+					<button class="button btn btn-default btn-primary" data-filter=".MAN">Manuscripts</button>
+					<button class="button btn btn-default btn-primary" data-filter=".MAP">Maps</button>
+					<button class="button btn btn-default btn-primary" data-filter=".PERS">Periodicals</button>
+					<button class="button btn btn-default btn-primary" data-filter=".RECS">Records</button>
+					<button class="button btn btn-default btn-primary" data-filter=".VIDEO">Video</button>
+				</div>
+			</div>
+		</div>
+		<!--#include virtual="/includes/collectionsCards.html"-->
+		<!--End Container-->
+	</div>
+	<!--#include virtual="/includes/footer.html"-->
+	<script src="/js/jquery-2.1.0.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/isotope.pkgd.min.js"></script>
+	<script>
+		// setup search
+		function dosearch() {
+			var sf = document.repoSearch;
+			var submitto = sf.sengines.options[sf.sengines.selectedIndex].value + escape(sf.searchterms.value);
+			window.location.href = submitto;
+			return false;
+		}
+		// setup footer
+		$(window).load(function() {
+			var maxHeight = $('.container').height();
+			$(".container").css('height', maxHeight);
+		});
+	</script>
+	<script>
+		$(window).load(function() {
+			// init Isotope
+			var $grid = $('.grid1').isotope({
+				itemSelector: '.grid-image-item',
+				layoutMode: 'fitRows'
+			});
+
+			// shuffle the cards and show titles
+			$grid.isotope('shuffle');
+			/*
+			var mw = window.matchMedia("(max-width: 700px)");
+			if (mw.matches) {
+				$('.image-overlay').css("display", "block")
+			}*/
+			$('.image-overlay').css("display", "block")
+
+
+			// filter functions
+			var filterFns = {
+				// show if number is greater than 50
+				numberGreaterThan50: function() {
+					var number = $(this).find('.number').text();
+					return parseInt(number, 10) > 50;
+				},
+				// show if name ends with -ium
+				ium: function() {
+					var name = $(this).find('.name').text();
+					return name.match(/ium$/);
+				}
+			};
+
+			// bind filter button click
+			$('.filters-button-group1').on('click', 'button', function() {
+				var filterValue = $(this).attr('data-filter');
+				// use filterFn if matches value
+				filterValue = filterFns[filterValue] || filterValue;
+				$grid.isotope({
+					filter: filterValue
+				});
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// You are in mobile browser
+					var maxHeight = $('.grid1').height() + $('header').height() + 300 ;
+					$(".container").css('height', maxHeight );
+				} else {
+				var maxHeight = $('.grid1').height() + $('header').height() + 160 ;
+				$(".container").css('height', maxHeight );
+			}
+			});
+
+			// change is-checked class on buttons
+			$('.button-group').each(function(i, buttonGroup) {
+				var $buttonGroup = $(buttonGroup);
+				$buttonGroup.on('click', 'button', function() {
+					$buttonGroup.find('.is-checked').removeClass('is-checked');
+					$(this).addClass('is-checked');
+				});
+			});
+
+			// remove filters and show all in clicking a new tab
+			$(".nav-tabs a").click(function() {
+				$(this).tab('show');
+				$grid.isotope({
+					filter: '*'
+				});
+				$('.button-group').each(function(i, buttonGroup) {
+					var $buttonGroup = $(buttonGroup);
+					$buttonGroup.find('.is-checked').removeClass('is-checked');
+					$('#show1').addClass('is-checked');
+					$('#show2').addClass('is-checked');
+					$('#show3').addClass('is-checked');
+				});
+			});
+
+		});
+	</script>
+</body>
+
+</html>

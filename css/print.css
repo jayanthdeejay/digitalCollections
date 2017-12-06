@@ -1,0 +1,83 @@
+body{
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+body.t1 #menu li#nav1 a,
+body.t2 #menu li#nav2 a,
+body.t3 #menu li#nav3 a,
+body.t4 #menu li#nav4 a,
+body.t5 #menu li#nav5 a,
+body.t6 #menu li#nav6 a{
+	display: none;
+}
+h3{
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+img{
+	display: none;
+}
+a img{border:none;}
+/*classes*/
+.addft{display:none;}
+.alsearch{display:none;}
+.backgr{background:#000000;}
+
+.line{color:#003366;}
+.nn{display:none;}
+.nshead{display:none;}
+.pghead{
+	left:30%;
+	position:absolute;
+	top:20px;
+	display: none;
+}
+.smalltext {
+	font-size: .10px;
+}
+.inlinehead {font-weight:bold;}
+.back {font-size:.7em;}
+#contentbox{
+	clear:none;
+	height:auto;
+	list-style:circle inside;
+	margin:0px 9px 25px 3px;
+	overflow:visible;
+	padding:5px 0px 0px;
+	position:relative;
+	text-align:left;
+	width:98%;
+	z-index:50;
+	background: #FFFFFF;
+	color: #000000;
+	page-break-before: auto;
+}
+#contentbox dt{
+	font-weight: bold;
+	}
+#contentbox li {
+	text-indent: 3pt;
+	line-height: 20px;
+}
+#contentbox table {
+	
+}
+#footerwrap{
+	display:none;
+	color: #FFFFFF;
+}
+#footnav{display:none;}
+#headerwrap{display:none;}
+#headertopleft{
+	display: none;
+	}
+#headertopright{
+	display: none;
+	}
+#navbar{display:none;}
+#qlwrap{display:none;}
+#subnav{display:none;}
+#subnavb{display:none;}
+#tabwrap{display:none;}
+#contentbox img {display: inline;}

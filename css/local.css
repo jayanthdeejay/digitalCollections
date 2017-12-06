@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+    /*border-color: #000000*/
+    border: none;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #000000;
+}
+.btn-default {
+    color: #E00122;
+}
+#navbarCollapse a:hover, #navbarCollapse a:focus, .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+    color: #000000 !important;
+}
+.small {
+    font-size: 16px !important;
+}
+.navbar {
+    border: none;
+}
+p, td, li {
+  font-size: 16px;
+}
+.form-control {
+  font-size: 14.5px;
+}
+#ucLogo {
+    float: left;
+    padding: 20px;
+}
+ul.nav.nav-pills li {
+    font-size: 18px;
+    text-align: left;
+}
+.colWrapper {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.colInfo {
+    background-color: rgba(255, 255, 255, 0.90);
+}
+.collButton {
+    width: 220px;
+    text-align: center;
+    margin: 20px;
+}
+.fullTextSearch {
+    text-align: left;
+    padding: 20px;
+}
+.fullTextSearch h3 {
+    margin-top: 0;
+}
+.container {
+    padding: 0px;
+}
+.row {
+    margin: 20px;
+    padding: 20px;
+}
+
+footer {
+    padding: 10px 20px 20px 10px;
+    text-align: left;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+footer img#CC {
+    border-width: 0;
+    float: left;
+    padding-top: 5px;
+    margin-right: 10px;
+}
+#exhiblibdiv {
+    margin: auto;
+    display: block;
+    width: 75%;
+}
+.sponsor {
+    background-color: rgba(200, 200, 200, .5);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.carcap {
+  padding: 10px;
+}
+#news {
+    padding: 20 px;
+}
+.rssHeader {
+  display: none;
+}
+/*Staff page*/
+.person {
+    width: 400px;
+    height: 120px;
+    /*border: 1px solid black;*/
+    margin: 10px 50px 10px 0;
+    padding: 0 10px 0 10px;
+}
+.person img {
+    float: right;
+    clear: both;
+    margin-top: 10px;
+    width: 90px;
+    height: 90px;
+}
+.staff {
+    width: 80%;
+    margin: auto;
+}
+
+/* RESPONSIVE WEB */
+
+@media (max-width: 400px) {
+    #unitName {
+        width: 200px;
+        padding-bottom: 10px;
+        margin-top: -10px;
+    }
+    #navbarCollapse {
+        padding: 10px;
+        margin-top: 15px;
+    }
+    .person {
+        width: 250px;
+    }
+    .person img {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px;
+    }
+    .colWrapper {min-width: auto;}
+}
+@media (min-width: 401px) and (max-width: 767px) {
+    #unitName {
+        width: 300px;
+        padding-bottom: 20px;
+        margin-top: -20px;
+    }
+    .navbar-brand {
+        font-size: 36px;
+        line-height: 38px;
+    }
+    #navbarCollapse {
+        padding: 10px;
+        margin-top: 15px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1300px) {
+    .navbar-header {
+        padding-bottom: 20px;
+    }
+    .small, {
+        display: none;
+    }
+    #unitName {
+        width: 290px;
+        padding-bottom: 10px;
+    }
+    #ucLogo {
+        display: block !important;
+        width: 125px;
+    }
+}
+
+@media (min-width: 1301px) {
+    #unitName {
+        width: 450px;
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin collection specific meta tags -->
+    <link rel="canonical" href="http://digital.libraries.uc.edu/collections/cincinnatian/" />
+    <link rel="schema.DC" href="http://purl.org/DC/elements/1.1/" />
+    <meta name="description" content="The Cincinnatian was published annually by the students of the University of Cincinnati from 1894 through 1972, with the exception of 1906, and sporadically since 1972. It offers primary material on students, faculty, the physical campus, athletic teams, social and political events, and student organizations. It is especially noteworthy for documenting trends in graphic design, the relationship of the university to the community, and student reaction to national events." />
+    <meta name="DC.title" content="The Cincinnatian (The official University of Cincinnati yearbook)" />
+    <meta name="DC.creator" content="University of Cincinnati" />
+    <meta name="DC.publisher" content="University of Cincinnati. Libraries" />
+    <meta name="DC.date" content="1875-2006" />
+    <meta name="DC.identifier" content="https://drc.libraries.uc.edu/handle/2374.UC/658" />
+    <meta name="DC.type" content="still image" />
+    <meta name="DC.type" content="text" />
+    <meta name="DC.rights" content="http://digital.libraries.uc.edu/fairuse/" />
+    <meta name="DC.language" content="eng" />
+    <meta name="DC.subject" content="University of Cincinnati -- Students -- Yearbooks" />
+    <meta name="DC.subject" content="Annual Reports -- Ohio -- Cincinnati -- Periodicals" />
+    <meta name="Keywords" content="University Libraries, University of Cincinnati, University of Cincinnati Libraries, Digital Collections and Repositories, ARL Research Library, Cincinnati" />
+    <!-- End collection specific meta tags -->
+    <title>The Cincinnatian (The official University of Cincinnati yearbook) | Digital Collections and Repositories | UC Libraries</title>
+    <!--#include virtual="/includes/style.html"-->
+    <style>
+        .colWrapper {
+            background-image: url('/images/collections/backgrounds/cincinnatian.png');
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--#include virtual="/includes/globalNav.html"-->
+    <!--#include virtual="/includes/header.html"-->
+    <div class="colWrapper">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 colInfo">
+                    <h2 style="text-align:center"><em>The Cincinnatian</em> (The official University of Cincinnati yearbook)</h2>
+
+                    <p><em>The Cincinnatian</em> was published annually by the students of the University of Cincinnati from 1894 through 1972, with the exception of 1906, and sporadically since 1972. It offers primary material on students, faculty, the
+                        physical campus, athletic teams, social and political events, and student organizations. It is especially noteworthy for documenting trends in graphic design, the relationship of the university to the community, and student reaction
+                        to national events.</p>
+                    <p>Original materials are held at the <a href="http://www.libraries.uc.edu/libraries/arb/">UC Archives and Rare Books Library</a>.</p>
+
+                    <h3>Full-Text Search <em>The Cincinnatian</em></h3>
+                    <form class="form-inline" name="cinciSearch" onSubmit="return dosearchCinci();">
+                        <div class="form-group">
+                            <label for="searchCinci">Search</lablel>
+                                <input type="text" class="form-control" id="searchCinci" placeholder="Enter search terms" name="searchtermsNews" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+
+                    <div style="text-align:center">
+                        <a href="http://drc.libraries.uc.edu/handle/2374.UC/658/" class="btn btn-lg btn-primary collButton" title="The Cincinnatian" role="button">Visit Digital Collection</a>
+                    </div>
+
+                    <div class="sponsor">
+                        <p>Support for this project was provided by two Library Services and Technology Act Minigrants awarded by the State Library of Ohio. The first grant covered digitization of <em>The Cincinnatian</em> through 1950. The second grant
+                            covered digitization of volumes from 1951-2006.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include virtual="/includes/footer.html"-->
+    <!--#include virtual="/includes/scripts.html"-->
+    <!--Page-specific scripts BEGIN-->
+    <script>
+        function dosearchCinci() {
+            var sf = document.cinciSearch;
+            var submitto = "https://drc.libraries.uc.edu/handle/2374.UC/658/search?rpp=10&sort_by=0&order=DESC&submit=Go&query=" + escape(sf.searchtermsNews.value);
+            window.location.href = submitto;
+            return false;
+        }
+    </script>
+    <!--Page-specific scripts END-->
+</body>
+
+</html>

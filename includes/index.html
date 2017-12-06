@@ -1,0 +1,579 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Digital Collections | UC Libraries | University of Cincinnati</title>
+
+<!--
+variables used if we were to switch to php for this file
+<?
+  $varbreadname="UC Libraries Digital Collections";
+  $varshowsitesearch="yes";
+?>
+-->
+<script type="text/javascript" src="/tabscripts/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="/tabscripts/element-min.js"></script>
+<script type="text/javascript" src="/tabscripts/tabview-min.js"></script>
+<script type="text/javascript" src="/tabscripts/history-min.js"></script>
+
+<!--above for tabs, below for top menu-->
+<script src="/menuscripts/container_core-min.js" type="text/javascript"></script>
+<script src="/menuscripts/menu-min.js" type="text/javascript"></script>
+<link href="/maincss/fonts-min.css" rel="stylesheet" 
+type="text/css">
+<link href="/maincss/container.css" rel="stylesheet" 
+type="text/css">
+<script src="/menuscripts/container-min.js" type="text/javascript"></script>
+
+
+<!--for accordion menu in quicklinks-->
+
+<script type="text/javascript" src="/accordioncss/jquery-1.js"></script>
+<script type="text/javascript" src="/accordioncss/ui.js"></script>
+<script type="text/javascript" src="/accordioncss/ui_002.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$("#accordion").accordion({
+			collapsible: true
+		});
+	});
+
+	</script>
+<!--
+<script type="text/javascript">/*
+     Initialize and render the MenuBar when its elements are ready 
+     to be scripted.
+*/
+
+YAHOO.util.Event.onContentReady("ulmenubar", function () {
+
+    /*
+         Instantiate a MenuBar:  The first argument passed to the 
+         constructor is the id of the element in the page 
+         representing the MenuBar; the second is an object literal 
+         of configuration properties.
+    */
+
+    var oMenuBar = new YAHOO.widget.MenuBar("ulmenubar", { 
+                                                autosubmenudisplay: true, 
+                                                hidedelay: 750, 
+                                                lazyload: true });
+
+    /*
+         Call the "render" method with no arguments since the 
+         markup for this MenuBar instance is already exists in 
+         the page.
+    */
+
+    oMenuBar.render();
+
+});
+
+</script>
+-->
+<!--initializes top menu-->
+
+<!--breadcrumbs,Quicklinks,secondarytabs-->	
+<script type="text/javascript" src="/scripts/SpryMenuBar.js"></script>
+ <script type="text/javascript" src="/scripts/breadcrumbs.js"></script> 
+<script type="text/javascript" src="/scripts/subnav.js"></script>
+
+
+<!--#include virtual="includes/css_main.inc"-->
+
+</head>
+
+<body class="yui-skin-sam"><iframe style="position: absolute; 
+visibility: visible; width: 2em; height: 2em; top: -31px; left: 0pt; 
+border-width: 0pt;" title="Text Resize Monitor" id="_yuiResizeMonitor"></iframe>
+
+<!--#include virtual="includes/header_main.inc"-->
+<!--#include virtual="includes/subnav_main.inc"-->
+
+<div id="main">
+  <div class="page_margins">
+    <div class="page">
+      <div class="subcolumns">
+<div style="font-size: 200%; color: #FF0000; width: 100%; margin: 0px auto 0px auto; text-align: center;">This is a test site in development.  For UC Libraries Digital Collections go to <a href="http://digital.libraries.uc.edu/">digitalprojects.libraries.uc.edu</a>.</div>
+        <div class="c25l">
+          <div class="subcl">
+<!--#include virtual="includes/quicklinks_main_withsearch.inc"-->
+
+          </div>
+        </div>
+        <div class="c75r">
+          <div class="subcr">
+            <!-- Insert your subtemplate content here -->
+            <iframe id="yui-history-iframe" 
+src="/maincss/blank.htm">Your browser does not support inline 
+frames or is currently configured not to display inline frames. </iframe>
+<input id="yui-history-field" type="hidden" />
+<div id="twrap">
+  <div id="demo" class="yui-navset yui-navset-top" role="main">
+    <ul class="yui-nav">
+      
+      
+ 
+      
+    <li title="active" class="selected"><a href="#tab1"><em>UC DRC</em></a></li>
+   <li title=""><a href="#tab2"><em>Digital Collections</em></a></li><li
+ title="" class=""><a href="#tab3"><em>About the DRC</em></a></li><li 
+title="" class=""><a href="#tab4"><em>About Digital Collections</em></a></li></ul>
+    <div class="yui-content">
+      <div id="tab1">
+        <div class="subcolumns">          
+          <div class="c62l">
+            <div class="formwrap">
+              <div class="highlightbox">Search the <a href="http://drc.libraries.uc.edu">UC Digital Resouce Commons</a> (DRC) to find a growing body of digitized texts, images and multimedia from UC Libraries collections and UC Colleges and Departments. Search the <a href="http://drc.ohiolink.edu">OhioLINK DRC</a> to find content submitted state-wide.</div>
+
+              
+<SCRIPT TYPE="text/javascript">
+<!--
+function dropdown(mySel,myQuery)
+{
+var myWin, myVal;
+myVal = mySel.options[mySel.selectedIndex].value;
+myVal = myVal + "?query=" + myQuery.value;
+if(myVal)
+   {
+   if(mySel.form.target) myWin = parent[mySel.form.target];
+   else myWin = window;
+   if (! myWin) return true;
+   myWin.location = myVal;
+   }
+return false;
+}
+//-->
+</SCRIPT>
+
+
+<form class="yform" 
+action="http://drc.libraries.uc.edu/" onSubmit="return dropdown (this.gourl, this.query)" method="post">
+                <input name="query" size="25" alt="search" type="text" />
+                <select name="gourl">
+                  <option value="http://drc.libraries.uc.edu/search" selected="selected">UC DRC</option>
+                  <option value="http://drc.ohiolink.edu/drc_search/index.php/search/results">All OhioLINK DRC</option>
+                </select>
+                <span class="type-button">
+                <input value="submit" name="submit" alt="submit" type="submit" />
+                </span>
+              </form>
+
+              <p><a href="http://drc.libraries.uc.edu/advanced-search">Advanced UC DRC Search</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://drc.ohiolink.edu/drc_search/index.php/search">Advanced OhioLINK DRC Search</a></p>
+            </div>
+</div>
+           <div class="c38r">
+             <h5>Additional Resources</h5>
+            <ul>
+              <li><a 
+href="http://www.libraries.uc.edu/collections/">UC Libraries Special Collections</a></li>
+              <li><a 
+href="http://libraries.uc.edu/research/media/index.html">UC Libraries Media Resources</a></li>
+              <li><a 
+href="drmc.ohiolink.edu" target="_blank">OhioLINK Digital Media Center</a></li>
+            </ul>
+            <hr>
+            <ul>
+              <li><a 
+href="http://drc.libraries.uc.edu/fairuse.html">Fair Use &amp; Copyright</a></li>
+              <li><a href="help/index.html">Help &amp; Feedback</a></li>
+            </ul>
+            
+          </div>
+            
+        </div>
+      </div>
+      <div class="yui-hidden" id="tab2">
+        <div class="subcolumns">
+          <div class="c62l">
+            <div class="formwrap">
+              <div class="highlightbox">
+
+
+
+<SCRIPT TYPE="text/javascript">
+<!--
+function lunasearch(mySel, myQuery)
+{
+var myWin, myVal;
+myVal = mySel.value;
+myLimitString = "+LIMIT%3ABardBar~1~1%2CChineseArt-ENG~1~1%2CCORNELL~3~1%2CCORNELL~9~1%2CESTATE~2~1%2CFBC~100~1%2CHOOVER~1~1%2CJCB~1~1%2CLTUHSS~20~20%2CMOAC~100~1%2CPRATTPRT~12~12%2CPRATTPRT~13~13%2CPRATTPRT~21~21%2CPRATTPRT~9~9%2CRUMSEY~8~1%2CRUMSEY~9~1%2CStanford~6~1%2Cunivcincin~24~24%2Cunivcincin~25~25%2Cunivcincin~26~26%2Cunivcincin~27~27%2Cunivcincin~28~28%2Cunivcincin~31~31%2Cunivcincin~32~32%2Cunivcincin~33~33&sort=null&search=Search"
+myVal = myVal + "?q=%3D" + myQuery.value + myLimitString;
+if(myVal)
+   {
+   if(mySel.form.target) myWin = parent[mySel.form.target];
+   else myWin = window;
+   if (! myWin) return true;
+   myWin.location = myVal;
+   }
+return false;
+}
+//-->
+</SCRIPT>
+
+                Search the <a href="http://digital.libraries.uc.edu/luna/servlet/allCollections">UC Digital Collections</a> offered in the <a href="http://digital.libraries.uc.edu:8180/luna/servlet/allCollections">Luna</a> interface, a growing body of high-resolution image collections from the UC Libraries, and image collections from other institutions available in the public Luna Commons.
+              </div>
+              <form class="yform" action="http://digital.libraries.uc.edu/luna/servlet/view/search/" name="searchForm" method="post" onSubmit="return lunasearch (this.searchurl, this.searchquery)">
+<input class="SSCentralSearchSearchCriteria" maxlength="1000" size="25" name="searchquery" alt="search" type="text" />
+<input name="searchurl" type="hidden" value="http://digital.libraries.uc.edu/luna/servlet/view/search/" />
+<span class="type-button">
+                        <input value="submit" name="submit" type="submit" />
+                        </span>
+              </form>
+          </div>
+</div>
+          <div class="c38r">
+             <h5>Additional Resources</h5>
+            <ul>
+              <li><a 
+href="http://www.libraries.uc.edu/collections/">UC Libraries Special Collections</a></li>
+              <li><a 
+href="http://libraries.uc.edu/research/media/index.html">UC Libraries Media Resources</a></li>
+              <li><a 
+href="drmc.ohiolink.edu" target="_blank">OhioLINK Digital Media Center</a></li>
+            </ul>
+            <hr>
+            <ul>
+              <li><a 
+href="/fairuse/index.html">Fair Use Policy</a></li>
+              <li><a href="help/index.html">Help &amp; Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="yui-hidden" id="tab3">
+        <div class="subcolumns">
+          <div class="c62l">
+            <div class="formwrap">
+              <div class="highlightbox">About the Digital Resource Commons</div>
+            </div>
+            <p style="padding-right:5px;">
+The Ohio Digital Resource Commons (DRC) is an initiative of OhioLINK and its member libraries, to collect, preserve, and distribute digital material.  The Ohio Digital Resource Commons is a network of repositories that enables institutions to save, discover and share the instructional, research, historic and creative materials produced by the University System of Ohio and Ohio's liberal arts colleges.
+</p>
+</div>
+          <div class="c38r">
+             <h5>Additional Resources</h5>
+            <ul>
+              <li><a 
+href="http://drc.libraries.uc.edu/">UC Digital Resource Commons</a></li>
+              <li><a 
+href="http://drc.ohiolink.edu/">OhioLINK Digital Resource Commons</a></li>
+              <li><a 
+href="http://drc.libraries.uc.edu/submit.html">How to Submit Materials to the DRC</a></li>
+</ul>
+            <hr>
+            <ul>
+              <li><a 
+href="http://drc.libraries.uc.edu/fairuse.html">Fair Use &amp; Copyright</a></li>
+              <li><a href="help/index.html">Help &amp; Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="yui-hidden" id="tab4">
+        <div class="subcolumns">
+          <div class="c62l">
+            <div class="formwrap">
+              <div class="highlightbox">About UC Libraries Digital Collections</div>
+            </div>
+            <p style="padding-right:5px;">
+The mission of the UC Libraries' digital collections initiative is to create and provide access to digital materials in support of the Libraries mission to provide excellent research collections and expedite access to knowledge.  These efforts further the University of Cincinnati's comprehensive mission of teaching, learning, research and community service.
+</p>
+</div>
+          <div class="c38r">
+             <h5>Additional Resources</h5>
+            <ul>
+              <li><a 
+href="http://drc.libraries.uc.edu/">UC Digital Resource Commons</a></li>
+              <li><a 
+href="http://drc.ohiolink.edu/">OhioLINK Digital Resource Commons</a></li>
+              <li><a 
+href="http://digital.libraries.uc.edu/luna/servlet/allCollections">UC Libraries Digital Collections (Luna)</a></li>
+</ul>
+            <hr>
+            <ul>
+              <li><a 
+href="/fairuse/index.html">Fair Use Policy</a></li>
+              <li><a href="help/index.html">Help &amp; Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+<!--</div>-->
+<script type="text/javascript">
+
+(function () {
+
+    // The initially selected tab will be chosen in the following order:
+    //
+    // URL fragment identifier (it will be there if the user previously
+    // bookmarked the application in a specific state)
+    //
+    //         or
+    //
+    // "tab0" (default)
+
+    var bookmarkedTabViewState = YAHOO.util.History.getBookmarkedState("tabview");
+    var initialTabViewState = bookmarkedTabViewState || "tab0";
+
+    var tabView;
+
+    // Register our TabView module. Module registration MUST
+    // take place before calling YAHOO.util.History.initialize.
+    YAHOO.util.History.register("tabview", initialTabViewState, function (state) {
+        // This is called after calling YAHOO.util.History.navigate, or after the user
+        // has trigerred the back/forward button. We cannot discrminate between
+        // these two situations.
+
+        // "state" can be "tab0", "tab1" or "tab2".
+        // Select the right tab:
+        tabView.set("activeIndex", state.substr(3));
+    });
+
+    function handleTabViewActiveTabChange (e) {
+        var newState, currentState;
+
+        newState = "tab" + this.getTabIndex(e.newValue);
+
+        try {
+            currentState = YAHOO.util.History.getCurrentState("tabview");
+            // The following test is crucial. Otherwise, we end up circling forever.
+            // Indeed, YAHOO.util.History.navigate will call the module onStateChange
+            // callback, which will call tabView.set, which will call this handler
+            // and it keeps going from here...
+            if (newState != currentState) {
+                YAHOO.util.History.navigate("tabview", newState);
+            }
+        } catch (e) {
+            tabView.set("activeIndex", newState.substr(3));
+        }
+    }
+
+    function initTabView () {
+        // Instantiate the TabView control...
+        tabView = new YAHOO.widget.TabView("demo");
+        tabView.addListener("activeTabChange", handleTabViewActiveTabChange);
+    }
+
+    // Use the Browser History Manager onReady method to instantiate the TabView widget.
+    YAHOO.util.History.onReady(function () {
+        var currentState;
+
+        initTabView();
+
+        // This is the tricky part... The onLoad event is fired when the user
+        // comes back to the page using the back button. In this case, the
+        // actual tab that needs to be selected corresponds to the last tab
+        // selected before leaving the page, and not the initially selected tab.
+        // This can be retrieved using getCurrentState:
+        currentState = YAHOO.util.History.getCurrentState("tabview");
+        tabView.set("activeIndex", currentState.substr(3));
+    });
+
+    // Initialize the browser history management library.
+    try {
+        YAHOO.util.History.initialize("yui-history-field", "yui-history-iframe");
+    } catch (e) {
+        // The only exception that gets thrown here is when the browser is
+        // not supported (Opera, or not A-grade) Degrade gracefully.
+        initTabView();
+    }
+
+})();
+
+</script>
+
+          </div>
+</div>
+</div>
+</div>
+</div>
+  <div class="page_margins">
+  <div class="page">
+    <div class="subcolumns">
+      <div id="bottom">
+        <div class="c25l" role="navigation">
+          <div class="subcl" style="border: 1px solid #CCC; margin-left: -4px;">
+      <h4>What's New</h4>
+
+
+<p style="margin-left: 5px;">
+New Site: <a href="/oesper/index.html">The Oesper Collections in the History of Chemistry
+</a>
+</p>
+
+<div style="padding: 0px; margin: 0px 0px 0px 5px; text-align: center;"><a href="/oesper/index.html"><img src="../images/oesper-news.jpg" vspace="0" hspace="0" width="180" height="113" alt="Brown-glass retort with quilled receiver and charcoal furnace" title="Brown-glass retort with quilled receiver and charcoal furnace" border="0" align="center"/></a>
+<br clear="all"/>
+This new site highlights <a href="/oesper/index.html">The Oesper Collections in the History of Chemistry</a>, a joint venture of the Ralph E. Oesper Chemistry-Biology Library and the Department of Chemistry of the University of Cincinnati.  <a href="../oesper/museum/virtual_tour/index.html">Virtual Tours</a> are available for the Museum and the circa 1900 Lab.  From the Museum virtual tour, or from the Museum <a href="../oesper/museum/displays.html">Displays</a>, users may click on a case, then a shelf and then an individual apparatus for 3-D and high resolution images of each apparatus.
+</div>
+
+<hr width="50%" />
+<p style="margin-left: 5px;">
+New Collection: <a href="../cincinnatian/index.html">The Cincinnatian</a> (The official University of Cincinnati yearbook)
+</p>
+
+<p style="margin-left: 5px;">
+<a href="../cincinnatian/index.html"><img src="../cincinnatian/UCseal.jpg" vspace="0" hspace="0" width="81" height="100" alt="University of Cincinnati seal" title="University of Cincinnati seal" border="0" align="left"/></a>
+<a href="../cincinnatian/index.html"><i>The Cincinnatian</i></a> was published annually by the students of the University of Cincinnati from 1894 through 1972, except 1906, and sporadically since 1972. It offers primary material on students, faculty, the campus, events and organizations, as well as the relationship of the university to the community and student reaction to national events.
+</p>
+
+<!--
+<hr width="50%" />
+
+<p align="center">
+New digital work: <a href="/SpanishAntiphoner/index.html">The Spanish Antiphoner</a>
+</p>
+
+<p align="center">
+<a href="/SpanishAntiphoner/index.html"><img src="/images/antiphoner_forNews.jpg" vspace="0" hspace="0" width="180" height="121" alt="The Spanish Antiphoner" title="The Spanish Antiphoner" border="0" /></a>
+<br clear="all"/>
+<a href="/SpanishAntiphoner/index.html"><i>The Spanish Antiphoner</i></a> is a 16th century choirbook containing Gregorian chant handwritten on vellum pages in neumatic notation with illuminated text capitals.
+</p>
+-->
+
+<!--
+<hr width="50%" />
+<p align="center">
+New Collection: <a href="/weston/index.asp">Alice Weston: Great Houses of Cincinnati</a>
+</p>
+
+<p align="center">
+<a href="/weston/index.html">
+<img src="/images/weston_forNews.jpg" vspace="0" hspace="0" width="180" height="84" alt="Alice Weston: Great Houses of Cincinnati" title="Alice Weston: Great Houses of Cincinnati" border="0" /></a>
+<br clear="all"/>
+<a href="/weston/index.html">Alice Weston: Great Houses of Cincinnati</a> contains over 1400 images of Cincinnati’s architectural gems photographed by environmental artist Alice Weston.
+</p>
+-->
+
+
+          </div>
+</div> 
+
+</div>
+        <div class="c50l">
+          <div class="subcl"> 
+          
+<h2>Digital Collections</h2>
+
+<div style="width:104px; float: right; margin: 0px 0px 15px 3px;">
+<a href="SpanishAntiphoner/index.html"><img src="/images/antiphoner_small.jpg" alt="The Spanish Antiphoner" title="The Spanish Antiphoner" border="0" vspace="0" hspace="0" width="72" height="70" /></a>
+</div>
+
+<div style="width: 68%; float: right; margin: 0px 3px 15px 0px; padding: 0px;"><b>Rare Books and Archives:</b>
+<br/><a href="/SpanishAntiphoner/index.html">The Spanish Antiphoner</a> 
+<br/><a href="/ArtAsImage/index.html" target="_blank">Art as Image</a>
+<br/><a href="http://digital.libraries.uc.edu/Births_and_Deaths/index.html">Cincinnati Birth and Death records (under development)</a>
+<br/>Dale Warland performance program archive (forthcoming)
+</div>
+
+
+
+
+<br clear="all"/>
+
+<div style="width:104px; float: right; margin: 0px 0px 15px 3px;">
+<a href="/newsrecord/index.php"><img src="/images/newsrecord1.jpg" alt="The News Record" title="The News Record" border="0" vspace="0" hspace="0"/></a>
+</div>
+
+<div style="width: 68%; float: right; margin: 0px 3px 15px 0px; padding: 0px;">
+<b>About the University:</b>
+<br/><a href="/cooperative_engineer/index.html">The Cooperative Engineer</a>
+<br/><a href="/newsrecord/index.php">The News Record</a>
+<br/><a href="/cincinnatian/index.html">The Cincinnatian</a>
+<br/>University photographs (forthcoming)
+</div>
+
+
+
+<br clear="all"/>
+
+<div style="width:104px; float: right; margin: 0px 0px 15px 3px;">
+<a href="/szwedzicki/index.html"><img src="/images/szwed_small.jpg" alt="C. Szwedzicki: The North American Indian Works" title="C. Szwedzicki: The North American Indian Works" border="0" vspace="0" hspace="0" width="100" height="70"/></a>
+</div>
+
+<div style="width: 68%; float: right; margin: 0px 3px 15px 0px; padding: 0px;">
+<b>Western Americana and the Trans-Mississippi West:</b>
+<br/><a href="/szwedzicki/index.html">C. Szwedzicki: The North American Indian Works</a>
+<br/><a href="/catlin/index.html">George Catlin: The Printed Works</a>
+<br/><a href="/lewisandclark/flash_detection.swf" target="_blank">Lewis &amp; Clark: A Journey</a>
+<br/><a href="/mckhall/index.html">McKenney &amp; Hall: History of the Indian Tribes of North America</a>
+<br/>A.E. Mathews: The Western Works (forthcoming)
+<br/>James Otto Lewis' The Aboriginal Portfolio (forthcoming)
+</div>
+
+
+<br clear="all"/>
+
+<div style="width:104px; float: right; margin: 0px 0px 15px 3px;">
+<a href="/archurban/index.html"><img src="/images/archurb1.jpg" alt="Architecture and Urban Planning Collection" title="Architecture and Urban Planning Collection" border="0" vspace="0" hspace="0"/></a>
+</div>
+
+<div style="width: 68%; float: right; margin: 0px 3px 15px 0px; padding: 0px;">
+<b>Art and Architecture:</b>
+<br/><a href="/archurban/index.html">The Architecture and Urban Planning Collection</a>
+<br/><a href="/weston/index.html">Alice Weston: Great Houses of Cincinnati</a>
+<br/><a href="/daap/index.html">DAAP Digital Image Teaching Collection</a>
+<br/><a href="/deshon/index.html">The Robert A. Deshon Courthouses Collection</a>
+<br/><a href="/foster/index.html">The Phil Foster Collection</a>
+</div>
+
+<br clear="all"/>
+
+<div style="width:104px; float: right; margin: 0px 0px 15px 3px;">
+<a href="/oesper/index.html"><img src="/images/oesper-balance.jpg" alt="The Oesper Collections in the History of Chemistry" title="The Oesper Collections in the History of Chemistry" border="0" vspace="0" hspace="0"/></a>
+</div>
+
+<div style="width: 68%; float: right; margin: 0px 3px 15px 0px; padding: 0px;">
+<b>Science and the History of Science:</b>
+<br/>The Correspondence and Photographs of Albert B. Sabin (forthcoming)
+<br/><a href="/oesper/index.html">The Oesper Collections in the History of Chemistry</a>
+<br/><a href="http://drc.libraries.uc.edu/handle/2374.UC/6">Reproductive Physiology Animations</a>
+<br/><a href="/cooperative_engineer/index.html">The Cooperative Engineer</a>
+</div>
+
+
+<br clear="all"/>
+
+<div style="width:104px; float: right; margin: 0px 0px 15px 3px;">
+<img src="/images/MiscMap064.jpg" alt="Historic Maps" title="Historic Maps" border="0" vspace="0" hspace="0"/>
+</div>
+
+<div style="width: 68%; float: right; margin: 0px 3px 15px 0px; padding: 0px;">
+<b>Geology and Geography:</b>
+<br/>Historic Maps from the Geology-Mathematics-Physics Library (forthcoming)
+</div>
+
+</div>
+</div>
+        <!-- <div class="c25r"> -->
+        <!--  <div class="subcr"> -->
+
+
+       <div style="width:20%; float:right; border: 1px solid #CCC; padding: 2px;"> 
+    <div class="blognews"> 
+
+<a href="http://www.libraries.uc.edu/liblog/libraries/digital-projects/"><h3>Digital Collections Blog-</h3></a>
+<ul>
+<!--#include virtual="rss2html.php"-->
+</ul>
+
+<a href="http://www.libraries.uc.edu/liblog/libraries/digital-projects/">read more...</a>
+ </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!--#include virtual="includes/footer_main.inc"-->
+</body>
+</html>

@@ -1,0 +1,270 @@
+<div id="uc-header" class="uc-header-footer">
+    <div class="GlobalNavDraggable">
+
+        <form name="GlobalNavForm" action="https://search.uc.edu/search" method="get" onsubmit="return doGlobalNavKeywordFormSubmit();" autocomplete="off">
+            <ul id="GlobalNavUL" class="NavList NavList4">
+                <li id="GlobalNavMapsLI" class="NavItem MapsItem"><a id="GlobalNavMapsLink" class="NavLink" href="http://www.uc.edu/visitors.html?from=globalnav">Visit UC</a></li> 
+                <li id="GlobalNavSupportLI" class="NavItem SupportItem"><a id="GlobalNavSupportLink" class="NavLink" href="http://www.uc.edu/foundation.html?from=globalnav">Support&nbsp;UC<span>&#x25BA;</span></a></li>
+                <li id="GlobalNavAZIndexLI" class="NavItem AZIndexItem"><a id="GlobalNavAZIndexLink" class="NavLink" href="https://ucdirectory.uc.edu/?from=globalnav">Directories</a></li>
+                <li id="GlobalNavToolsLI" class="NavItem ToolsItem"><a id="GlobalNavToolsLink" class="NavLink" href="javascript:void(0);">UC Tools</a>
+                    <ul id="GlobalNavToolsUL" class="ToolsList">
+                        <li class="ToolDropItem"><a class="ToolDropLink" href="http://blackboard.uc.edu?from=uctools">Blackboard</a></li>
+                        <li class="ToolDropItem"><a class="ToolDropLink" href="http://onestop.uc.edu?from=uctools">OneStop</a></li>
+                        
+                        <li class="ToolDropItem"><a class="ToolDropLink" href="https://mail.uc.edu?from=uctools">Student Email</a></li>
+                        <li class="ToolDropItem"><a class="ToolDropLink" href="https://ucowa.uc.edu/?from=uctools">UCMail</a></li>
+                        <li class="ToolDropItem"><a class="ToolDropLink" href="https://ucfilespace.uc.edu/?from=uctools">UCFileSpace</a></li>
+                        <li class="ToolDropItem"><a class="ToolDropLink" href="https://www.ucflex.uc.edu/">UC Flex/ESS</a></li>
+                        <li class="ToolDropItem"><a class="ToolDropLink" href="http://www.uc.edu/pss/?from=uctools">Password Help</a></li>
+                        <li class="ToolDropItem"><a class="ToolDropLink" href="https://sslvpn.uc.edu?from=uctools">UC VPN</a></li>
+                    </ul>
+    			</li>
+				<li id="GlobalNavSearchLI" class="NavItem SearchItem ClearFix">
+
+                    <div id="GlobalNavSearchInputDiv" class="SearchInput">
+                        <label for="q" class="hidden" style="display: none;">Search:</label>                
+                        <input id="GlobalNavSearchBox" class="SearchBox" type="text" name="q" placeholder="Search UC" />
+                        <input id="GlobalNavSearchButton" class="SearchButton" type="image" name="btnG" src="images/go_button.png" alt="Go" />
+                        
+                        <input id="gsclient" type="hidden" name="client" value="ucmain_frontend" />
+                        <input id="gsproxystylesheet" type="hidden" name="proxystylesheet" value="ucmain_frontend" />
+                        
+                        <input type="hidden" name="output" value="xml_no_dtd" />
+                        <input type="hidden" name="ie" value="UTF-8" />
+                        <input type="hidden" name="sort" value="date:D:L:d1" />
+                        <input type="hidden" name="entqr" value="0" />
+                        <input type="hidden" name="oe" value="UTF-8" />
+                        <input type="hidden" name="num" value="10" />
+                        <input type="hidden" name="lr" value="" />
+                        <input type="hidden" name="searchType" value="people" />
+                        <input type="hidden" name="formInputBox" value="" />
+                        <input type="hidden" name="ud" value="1" />
+                        <input type="hidden" name="formMode" value="Search" />
+                    </div>
+
+					<ul id="GlobalNavSearchOptionsUL" class="SearchList">
+                
+						<li id="GlobalNavSearchUniversityLI" class="BoundaryItem UniversityItem">
+                    
+                            <input id="GlobalNavSearchUniversityRadio" class="SearchRadio UniversityRadio" type="radio" name="site" checked="checked" value="UC" onclick="SearchFrontendChange('ucmain_frontend');" />
+                                                    
+                            <label for="GlobalNavSearchUniversityRadio" class="BoundaryLabel UniversityLabel">Search UC Web</label></li>
+                            
+                            <li id="GlobalNavSearchPeopleLI" class="BoundaryItem PeopleItem">
+                                                
+                            <input id="GlobalNavSearchPeopleRadio" class="SearchRadio PeopleRadio" type="radio" name="site" value="People" />
+                                                    
+                            <label for="GlobalNavSearchPeopleRadio" class="BoundaryLabel PeopleLabel">Search People</label>
+						</li>
+                
+						<li id="GlobalNavSearchCloseLI" class="CloseItem"><a id="GlobalNavSearchCloseLink" class="CloseLink" href="javascript:void(0);">close</a></li>				
+                 	</ul>
+             	</li>
+			</ul>
+		</form>
+
+	<script type="text/javascript">
+    /*
+     *  Watermark plugin
+     *  Version: 0.6
+     *  jQuery 1.2.6
+     *   
+     *  Author: Gonzalo Villar
+     *  Modified by Dan Ludwig 2010.08.07
+     *  1.) Instead of show/hide of mock elements, real textbox is never hidden.
+     *      The mock element is position:absoluted and placed over the real box. 
+        2.) Adds fadein/fadeout functionality of the watermark overlay
+        3.) Removes interference with other textbox events 
+            Interference with focus/blur events that control the show/hide of search radio buttons is gone
+            Screen flicker bug during radio button clicks is gone (thanks also to fadein/fadeout options)
+     *
+     *  TODO:
+    *       - Create new plugin filename/methodname for this customized code?
+     * 
+    */
+    (function($){
+    
+        function CreateDummyInput(jElement, options, tagName)
+        {
+            var watermarkText = (options.watermarkText) ? options.watermarkText : jElement.attr('title');
+            var dummyType = (tagName == 'INPUT') ? '<input type="text">' : '<textarea>';
+            var dummyInput = $(dummyType)
+                .attr('id', jElement.attr('id') + '_watermark')
+                .addClass(options.watermarkCssClass)
+                .addClass('watermarkPluginCustomClass') //workaround to fix some caching? problem in FF3. Used in window.unload hook to remove watermarks from the DOM
+                .val(watermarkText)
+                .css({overflowY: jElement.css('overflow-y'), overflowX: jElement.css('overflow-x'),
+                    position:'absolute',left:jElement.position().left});
+                
+            //if(jElement.height() > 0)
+            //    dummyInput.css({height: jElement.outerHeight(), width: jElement.outerWidth()});
+    
+            dummyInput.hide();
+            jElement.before(dummyInput);
+            return dummyInput;
+        }
+    
+        function MakeWatermark(element, options)
+        {
+            var watermarkFadeTime = (options.watermarkFadeTime) ? options.watermarkFadeTime : 250;
+            element.each(function(){            
+                var thisEl = jQuery(this);
+    
+                var dummyInput = CreateDummyInput(thisEl, options, thisEl.attr('tagName').toUpperCase());
+    
+                dummyInput.focus(function(e){
+                    $(this).hide();
+                    thisEl.focus();
+                });
+                
+                thisEl.blur(function(e){
+                    if(this.value == '')
+                    {
+                        //$(this).hide();
+                        dummyInput.fadeIn(watermarkFadeTime);
+                    }
+                });
+    
+                thisEl.blur();
+    
+            });
+    
+            return element;
+        }
+    
+        $(window).unload(function(){
+            $('.watermarkPluginCustomClass').remove();
+        });
+    
+        $.fn.watermark = function(options){ return MakeWatermark(this, options);}   
+    
+    })(jQuery);
+    
+    </script>
+    
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    
+        var GNavTPiv = false;
+        var jGNavTUL = $('#GlobalNavToolsUL');
+        var jGNavTA = $('#GlobalNavToolsLink');
+        jGNavTA.hover(function() {
+            jGNavTUL.fadeIn(250);
+            GNavTPiv = true;
+        }, function() {
+            GNavTPiv = false;
+            setTimeout(function() { GNavTHid(); }, 250);
+        });
+        jGNavTUL.hover(function() {
+            GNavTPiv = true;
+        }, function() {
+            GNavTPiv = false;
+            setTimeout(function() { GNavTHid(); }, 250);
+        });
+        function GNavTHid() {
+            if (!GNavTPiv)
+                jGNavTUL.fadeOut(250);
+        }
+    
+        var GNavSPiv = false;
+        var jGNavSTB = $('#GlobalNavSearchBox');
+        var jGNavSUL = $('#GlobalNavSearchOptionsUL');
+        var jGNavSCL = $('#GlobalNavSearchCloseLink');
+        jGNavSTB.focus(function() {
+            GNavSPiv = true;
+            jGNavSUL.fadeIn(250);
+        });
+        jGNavSTB.click(function(event) {
+            GNavSPiv = true;
+            event.stopPropagation();
+        });
+        jGNavSUL.click(function(event) {
+            GNavSPiv = true;
+            event.stopPropagation();
+        });
+        jGNavSCL.click(function() {
+            GNavSPiv = false;
+            GNavSHid();
+        });
+        jquery(document).click(function() {
+            GNavSPiv = false;
+            GNavSHid(); 
+        });
+        function GNavSHid() {
+            if (!GNavSPiv)
+                jGNavSUL.fadeOut(250);
+        }
+    
+        
+        
+        var jGNavSRD = $('#GlobalNavSearchDepartmentRadio');
+        var jGNavSRU = $('#GlobalNavSearchUniversityRadio');
+        var jGNavSRP = $('#GlobalNavSearchPeopleRadio');
+        jquery(document).ready(function() {
+            GNavSTW();
+        });
+        jGNavSRD.change(function(){
+            GNavSTW();
+        });
+        jGNavSRU.change(function(){
+            GNavSTW();
+        });
+        jGNavSRP.change(function(){
+            GNavSTW();
+        });
+        function GNavSTW() {
+            var jGNavSTM = $('#GlobalNavSearchBox_watermark');
+            if (jGNavSTM && jGNavSTM.length > 0)
+                jGNavSTM.remove();
+            var wmt = 'Search UC';
+            if (jGNavSRD.is(':checked')) {
+                wmt = '';
+            } else if (jGNavSRP.is(':checked')) {
+                wmt = 'Last Name, First Name';
+            }
+            jGNavSTB.watermark(wmt);
+        }
+    
+        
+        
+        // submit the form
+        
+        function SearchFrontendChange(frontendName) {
+            document.getElementById('gsclient').value=frontendName;
+            document.getElementById('gsproxystylesheet').value=frontendName;
+        }
+        
+        function doGlobalNavKeywordFormSubmit() {
+            var textBox = document.getElementById('GlobalNavSearchBox');
+            if (textBox.value.length < 1) {
+                return false;
+            }
+            var allRadios = document.GlobalNavForm.site;
+            var checkedRadio = null;
+            for ( var i = 0; i < allRadios.length; i++) {
+                if (allRadios[i].checked) {
+                    checkedRadio = allRadios[i];
+                    break;
+                }
+            }
+            if (checkedRadio == null) {
+                checkedRadio = allRadios[0];
+                checkedRadio.checked = true;
+            }
+            // reconfigure the form for people search boundary
+            if (checkedRadio.id == 'GlobalNavSearchPeopleRadio') {
+                document.GlobalNavForm.method = 'post';
+                document.GlobalNavForm.action = 'http://ucdirectory.uc.edu/PeopleSearch.asp';
+                document.GlobalNavForm.formInputBox.value = textBox.value;
+    
+                return true;
+            } else {
+                return true;
+            }
+            return false;
+        }
+        //]]>
+    </script>
+    </div><!--end GlobalNavDraggable-->
+</div><!--end uc header-->

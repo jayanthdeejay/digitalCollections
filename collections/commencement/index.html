@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin collection specific meta tags -->
+    <link rel="canonical" href="http://digital.libraries.uc.edu/collections/commencement/" />
+    <link rel="schema.DC" href="http://purl.org/DC/elements/1.1/" />
+    <meta name="description" content="This digital collection contains digitized vertical files for annual/semi-annual commencement ceremonies. Records for each commencement may include programs from commencement and related ceremonies, text of related speeches, and other related materials." />
+    <meta name="DC.title" content="UC Commencement Programs" />
+    <meta name="DC.creator" content="University of Cincinnati" />
+    <meta name="DC.publisher" content="University of Cincinnati. Libraries" />
+    <meta name="DC.date" content="1878-1973" />
+    <meta name="DC.identifier" content="https://drc.libraries.uc.edu/handle/2374.UC/749901" />
+    <meta name="DC.type" content="still image" />
+    <meta name="DC.type" content="text" />
+    <meta name="DC.rights" content="http://digital.libraries.uc.edu/fairuse/" />
+    <meta name="DC.language" content="eng" />
+    <meta name="DC.subject" content="University of Cincinnati -- Students" />
+    <meta name="Keywords" content="University Libraries, University of Cincinnati, University of Cincinnati Libraries, Digital Collections and Repositories, ARL Research Library, Cincinnati" />
+    <!-- End collection specific meta tags -->
+    <title>UC Commencement Programs | Digital Collections and Repositories | UC Libraries</title>
+    <!--#include virtual="/includes/style.html"-->
+    <style>
+        .colWrapper {
+            background-image: url('/images/collections/backgrounds/commencement.jpg');
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--#include virtual="/includes/globalNav.html"-->
+    <!--#include virtual="/includes/header.html"-->
+    <div class="colWrapper">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 colInfo">
+                    <h2 style="text-align:center">UC Commencement Programs</h2>
+
+                    <p>This digital collection contains digitized vertical files for annual/semi-annual commencement ceremonies. Records for each commencement may include programs from commencement and related ceremonies, text of related speeches, and other related materials.</p>
+                    <p>Original materials are held at the <a href="http://www.libraries.uc.edu/libraries/arb/">UC Archives and Rare Books Library</a>.</p>
+
+                    <h3>Full-Text Search Commencement Programs</h3>
+                    <form class="form-inline" name="cinciSearch" onSubmit="return dosearchCinci();">
+                        <div class="form-group">
+                            <label for="searchCinci">Search</lablel>
+                                <input type="text" class="form-control" id="searchCinci" placeholder="Enter search terms" name="searchtermsNews" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+
+                    <div style="text-align:center">
+                        <a href="http://drc.libraries.uc.edu/handle/2374.UC/749901/" class="btn btn-lg btn-primary collButton" title="The Cincinnatian" role="button">Visit Digital Collection</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#include virtual="/includes/footer.html"-->
+    <!--#include virtual="/includes/scripts.html"-->
+    <!--Page-specific scripts BEGIN-->
+    <script>
+        function dosearchCinci() {
+            var sf = document.cinciSearch;
+            var submitto = "https://drc.libraries.uc.edu/handle/2374.UC/749901/search?rpp=10&sort_by=0&order=DESC&submit=Go&query=" + escape(sf.searchtermsNews.value);
+            window.location.href = submitto;
+            return false;
+        }
+    </script>
+    <!--Page-specific scripts END-->
+</body>
+
+</html>

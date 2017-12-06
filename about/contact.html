@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact | Digital Collections and Repositories | UC Libraries</title>
+	<!--#include virtual="/includes/style.html"-->
+	<link rel="canonical" href="http://digital.libraries.uc.edu/about/contact.html" />
+	<script src="/js/jquery-2.1.0.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		html,
+		body,
+		header,
+		nav,
+		#header,
+		.navbar nav.navbar-default {
+			background-color: white !important;
+		}
+
+		input:invalid {
+			border-color: #b94a48;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		}
+
+		input:valid {
+			border-color: #468847;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		}
+
+		.contact {
+			margin-left: 2em;
+			margin-bottom: 2em;
+		}
+
+		.browser {
+			margin-bottom: 2em;
+		}
+
+		.help-block {
+			color: red;
+			margin-left: 15em;
+		}
+		.g-recaptcha {
+			width: 324px;
+    		margin: auto;
+			padding:10px;
+		}
+	</style>
+	<script>
+		function fill() {
+			document.getElementById("userAgent").value = navigator.userAgent;
+			document.getElementById("referrer").value = document.referrer;
+			document.getElementById("submit").disabled = 'true';
+		}
+
+		function nameCheck() {
+			if (document.forms["contactForm"]["name"].value == "") {
+				document.getElementById("nameMessage").style.display = 'block';
+				document.getElementById("nameMessage").innerHTML = '<p>Please enter a name!</p>';
+			} else {
+				document.getElementById("nameMessage").style.display = 'none';
+			}
+
+		}
+
+		function nameLeave() {
+			if (document.forms["contactForm"]["comments"].value !== "") {
+				document.getElementById("submit").removeAttribute("disabled");
+			}
+		}
+
+		function emailCheck() {
+			var email = document.getElementById("email").value
+			var confEmail = document.getElementById("emailConfirm").value
+			if (email != confEmail) {
+				document.getElementById("emailMessage").style.display = 'block';
+				document.getElementById("emailMessage").innerHTML = '<p>Email does not match!</p>';
+				document.getElementById("submit").disabled = 'true';
+			} else {
+				document.getElementById("emailMessage").style.display = 'none';
+			}
+		}
+
+		function commentCheck() {
+			if (document.forms["contactForm"]["comments"].value == "") {
+				document.getElementById("commentsMessage").style.display = 'block';
+				document.getElementById("commentsMessage").innerHTML = '<p>Please enter a comment!</p>';
+			} else {
+				document.getElementById("commentsMessage").style.display = 'none';
+			}
+		}
+
+		function commented() {
+			if (document.forms["contactForm"]["name"].value !== "") {
+				document.getElementById("submit").removeAttribute("disabled");
+			}
+		}
+
+		function validateForm() {
+			var nameV = document.forms["contactForm"]["name"].value
+			var emailV = document.forms["contactForm"]["email"].value
+			var commentV = document.forms["contactForm"]["comments"].value
+			if (nameV == "" || commentV == "" || emailV == "") {
+				return false;
+			} else {
+				return true;
+			}
+		}
+	</script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body onLoad="fill()">
+
+	<!--#include virtual="/includes/globalNav.html"-->
+	<!--#include virtual="/includes/header.html"-->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<form class="form-horizontal" role="form" method="post" action="/tools/feedbackMailer.php" name="contactForm" id="contactForm">
+					<h2>Contact the Digital Collection and Repositories Department.</h2>
+					<p>Please contact us with your comments, suggestions, or questions about the <a href="https://digtal.libraries.uc.edu">Digital Collections and Repositories Department</a> or any of the content in our repositories. See also our <a href="/about/fairUse.html">Fair Use Policy</a>						for questions about copyright and re-use or distribution of the content found in digital collections.</p>
+					<div class="contact">
+						<p>Digital Collection and Repositories
+							<br> University of Cincinnati Libraries
+							<br/> University of Cincinnati
+							<br/> PO Box 210033
+							<br/> Cincinnati, Ohio 45221-0033
+							<br/>
+							<a href="https://digital.libraries.uc.edu">http://digital.libraries.uc.edu</a></p>
+					</div>
+					<div class="browser">
+						<h4>Browser Information</h4>
+						<p>The following information will be sent with your feedback:</p>
+						User Agent:
+						<script>
+							document.write(navigator.userAgent);
+						</script>
+						<br/> Referring URL:
+						<script>
+							document.write(document.referrer);
+						</script>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-2 control-label">Name:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="name" name="name" onkeypress="nameLeave()" onblur="nameCheck()" placeholder="First Last" required autofocus autocomplete="on">
+						</div>
+						<span class="help-block" id="nameMessage"></span> </div>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">Email:</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="email" name="email" onblur="emailCheck()" placeholder="Email address" required autocomplete="on">
+						</div>
+						<span class="help-block"></span> </div>
+					<div class="form-group">
+						<label for="emailConfirm" class="col-sm-2 control-label">Email (confirm):</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="emailConfirm" name="emailConfirm" onblur="emailCheck()" placeholder="Confirm email address" required autocomplete="off">
+						</div>
+						<span class="help-block" id="emailMessage"></span> </div>
+					<div class="form-group">
+						<label for="comments" class="col-sm-2 control-label">Comments:</label>
+						<div class="col-sm-10">
+							<textarea type="textarea" class="form-control" name="comments" id="comments" onkeypress="commented()" onblur="commentCheck()" required autocomplete="on" rows="4" placeholder="Enter comments here"></textarea>
+						</div>
+						<span class="help-block" id="commentsMessage"></span> </div>
+					<input type="hidden" id="userAgent" name="userAgent" value="">
+					<input type="hidden" id="referrer" name="referrer" value="">
+					<div class="g-recaptcha" data-sitekey="6LeR9w4UAAAAAEpHCzAQft7yVrY_H1T3ETPFCekG"></div>
+					<button class="btn btn-lg btn-primary" type="submit" style="margin:auto;display:block;" id="submit" name="submit" onclick="validateForm()">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--#include virtual="/includes/footer.html"-->
+	<script type="text/javascript">
+		// setup search
+		function dosearch() {
+			var sf = document.repoSearch;
+			var submitto = sf.sengines.options[sf.sengines.selectedIndex].value + escape(sf.searchterms.value);
+			window.location.href = submitto;
+			return false;
+		}
+	</script>
+</body>
+
+</html>
